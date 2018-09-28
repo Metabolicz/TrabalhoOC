@@ -17,9 +17,9 @@ reg [2:0] state;
 parameter zero=3'd0, tres=3'd1, dois=3'd2, quatro=3'd3, cinco =3'd4;
 
 assign saida = (state == zero)? 3'd2:
-           (state == dois)? 3'd5:
-	   (state == tres)? 3'd6:
-	   (state == quatro)? 3'd4:3'd3;
+	(state == dois)? 3'd6:
+	(state == tres)? 3'd5:
+	(state == quatro)? 3'd4:3'd3;
 
 always @(posedge clk or negedge reset)
      begin
